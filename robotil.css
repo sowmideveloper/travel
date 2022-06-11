@@ -1,0 +1,557 @@
+:root{
+	--orange: #ffa500;
+
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-transform: capitalize;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	transition: all .2s linear;
+}
+::selection{
+background:var(--orange);
+color:#fff;
+	}
+
+html{
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-padding-top: 6rem;
+	scroll-behavior: smooth;
+}
+
+
+section{
+  padding: 2rem 9%;
+}
+.btn{
+	display: inline-block;
+	margin-top: 1rem;
+	background: var(--orange);
+	color: #fff;
+	padding: .8rem 3rem ;
+	border: .2rem solid var(--orange);
+}
+.btn:hover{
+	background: rgba(255, 165, 0, .2);
+	color: var(--orange);
+}
+#btn{
+  margin-top: 1rem;
+  background: var(--orange);
+  color: #fff;
+  padding: .8rem 3rem ;
+  border: .2rem solid var(--orange);
+}
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #333;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem 9%;
+}
+
+
+
+header .logo{
+	font-size: 2.5rem;
+	font-weight: bolder;
+	color: #fff;
+	text-decoration: uppercase;
+
+}
+ header .logo span{
+ 	color: var(--orange);
+
+ }
+
+ header .navbar a{
+ 	color: #fff;
+ 	font-size: 2rem;
+ 	margin: .8rem;
+ }
+
+ header .navbar a:hover{
+ 	color: var(--orange);
+ }
+
+ header .search-bar-container{
+ 	position: absolute;
+ 	top: 100%;
+ 	left: 0;right: 0;
+ 	padding: 1.5rem 2rem;
+ 	background: #333;
+ 	border-top: 1rem solid rgba(255, 255, 255, .2);
+ 	display: flex;
+ 	align-items: center;
+ 	z-index: 1001;
+
+ }
+
+ header .search-bar-container #search-bar{
+ 	width: 100%;
+ 	padding: 1rem;
+ 	text-transform: none;
+ 	color: #333;
+ 	font-size: 1.7rem;
+ 	border-radius: .5rem;
+ }
+
+ header .search-bar-container label{
+ 	color: #fff;
+ 	cursor: pointer;
+ 	font-size: 3rem;
+ 	margin-left: 1.5rem;
+ }
+
+  header .search-bar-container label:hover{
+  	color: var(--orange);
+  }
+
+  header .icons{
+  	color: #fff;
+  	font-size: 2rem;
+  }
+  header .icons:hover{
+  	color: var(--orange);
+  }
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: var(--orange);
+  color: #fff;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 17rem;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+height: 30rem;
+}
+.home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  z-index: 0;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(p-2.jpg) no-repeat;
+  background-size: cover;
+}
+.home  h1{
+  font-size: 4.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.3);
+}                       
+
+.home .content p{
+  font-size: 2.5rem;
+  color: #fff;
+  padding: .5rem 0; text-align: center;
+}
+
+.home  .btn{
+
+}
+.home .content .btn:hover{
+  background: gray;
+  border: 1rem solid gray;
+
+}
+.head{
+  text-align: center;
+  padding: 2.5rem 0;
+
+}
+.head span{
+  font-size: 3.5rem;
+  color: var(--orange);
+  border-radius: .5rem;
+  padding: .2rem 1rem;
+}
+
+.head span .space{
+  background: white;
+}
+.book img{
+  width: 60rem;
+    
+}
+
+ #form{
+  align-items: center;
+  padding: 2rem;
+  border-radius: .5rem;
+  margin-left: 5rem;
+  margin-top: 0rem;
+  border: 1rem transparent #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+  height: 42rem;
+  justify-content: center;
+  
+}
+#form h3{
+
+letter-spacing: 2px;
+color: black;
+}
+
+#form .inputbox {
+  padding: .5rem 0;
+}
+#form .inputbox input{
+  width: 100%;
+  padding: 1rem;
+  border: .1rem solid rgba(0, 0, 0, .1);
+  font-size: 1.5rem;
+  color: #333;
+  text-transform: none;
+}
+.card{
+  background: #e5e5e5;
+  border: .1rem solid rgba(0, 0, 0, .2)  !important;
+  border border-radius: 100px !important;
+
+}
+.card:hover{
+  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.3),
+              inset -4px -4px 10px white;
+}
+.card i{
+  padding-left:.2rem ;
+}
+.fa {
+  font-size: 15px;
+}
+
+.checked {
+  color: orange;
+}
+#cardimg{
+  height: 200px;
+  
+}
+
+#fafa{
+  font-size: 6rem;
+  padding-top: 2rem;
+  padding-left: 12.5rem;
+  color: var(--orange);
+}
+.services .card h5{
+  font-size: 1.9rem;
+  color: black;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.services .card h6{
+  font-size: 1.3rem;
+  text-align: center;
+}
+.services .card{
+  background: #fff;
+  border: .1rem solid transparent;
+}
+
+.services .card:hover{
+  box-shadow: inset 5px 5px 15px var(--orange);,
+              inset -4px -4px 10px white;
+
+
+}
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+
+
+
+
+
+.title {
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 10px
+}
+
+.gallery .content {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden
+}
+
+.gallery .content .content-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.5;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s
+}
+
+.gallery.content .content-overlay:hover{
+    opacity: 1.3;
+    background: var(--orange);
+}
+
+.gallery .content-image {
+    width: 100%
+}
+
+.gallery img {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px
+}
+
+.gallery .content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s
+}
+
+.gallery .content:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1.2
+}
+
+.gallery .content-details h3 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase
+}
+
+
+.gallery .content-details p {
+    color: #fff;
+    font-size: 0.8em
+}
+
+.gallery .fadeIn-bottom {
+    top: 80%
+}
+.slider .card{
+  height: 40rem;
+  width: 25rem;
+}
+
+.review .card{
+padding: 2rem;
+text-align: center;
+box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+border-radius: .5rem;
+
+
+}
+
+.review .review-slider{
+  padding-bottom: 2rem;
+}
+.review .card img{
+  height: 13rem;
+  width: 13rem;
+  border-radius: 50%;
+  margin-left: 4.5rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.review h1{
+color: #333;
+font-size: 2.5rem;
+
+}
+
+.review p{
+color: #666;
+font-size: 1.5rem;
+
+}
+.testimonials{
+  margin: 50px auto;
+}
+.testimonials .row .profile img{
+  height: 15rem ;
+  width: 15rem;
+  border-radius: 50%;
+}
+
+.testimonials .row .profile blockquote{
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.testimonials .row .profile span{
+  color: var(--orange);
+}
+
+ .contact #form{
+  align-items: center;
+  padding: 2rem;
+  border-radius: .5rem;
+  margin-top: 5rem;
+  border: 1rem transparent #fff;
+  height: 60rem;
+  justify-content: center;
+  background: none;
+  margin-left: 8rem;
+  
+}
+ .contact #form h3{
+
+letter-spacing: 2px;
+color: black;
+}
+
+.contact #form .inputbox {
+  padding: .5rem 0;
+}
+.contact  #form .inputbox input{
+  width: 100%;
+  padding: 1rem;
+  border: .1rem solid rgba(0, 0, 0, .1);
+  font-size: 1.5rem;
+  color: #333;
+  text-transform: none;
+}
+.contact img{
+  padding: 0rem ;
+  margin-top: 5rem;
+  margin-right: 6rem;
+  
+
+}
